@@ -682,7 +682,7 @@ export default function CustomerDetails({
                     <Box sx={{ mt: 1, display: 'flex', justifyContent: 'flex-end' }}>
                       <Box
                         component="a"
-                        href={history.payment_receipt}
+                        href={`${import.meta.env.VITE_BACKEND_URL}${history.payment_receipt}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         sx={{
