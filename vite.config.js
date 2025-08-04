@@ -49,7 +49,8 @@ const vitePWAConfig = {
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(), VitePWA(vitePWAConfig),
+  base: '/',
+  plugins: [react(),  tailwindcss(), VitePWA(vitePWAConfig),
   ],
   server: {
     host: '0.0.0.0', // This makes it accessible from your local network
