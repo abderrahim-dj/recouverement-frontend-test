@@ -619,7 +619,7 @@ export default function CreateNewCustomer() {
                   <Typography>{customerInfo.data.adresse}</Typography>
       
                   <Typography sx={{ fontWeight: 'bold', color: 'text.secondary' }}>Client de:</Typography>
-                  <Typography>{formDataSaving.customer_belong_to === 'autre' ? formDataSaving.customer_belong_to_name_autre : listOfAvailableBelongTo.find(item => item.id === formDataSaving.customer_belong_to).association_name}</Typography>
+                  <Typography>{formDataSaving.customer_belong_to === 'autre' ? formDataSaving.customer_belong_to_name_autre : listOfAvailableBelongTo.find(item => item.id === formDataSaving.customer_belong_to).name}</Typography>
                 </Box>
               </Box>
 
