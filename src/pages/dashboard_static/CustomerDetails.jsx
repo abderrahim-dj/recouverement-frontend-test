@@ -176,28 +176,28 @@ export default function CustomerDetails({
       }}>
 
         <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 0 : 2, alignItems: isMobile ? 'start' : 'center' }}>
-          <Typography level="body-xs" sx={{ color: 'text.secondary' }}>ID CLIENT :</Typography>
+          <Typography level="body-xs" sx={{ color: 'text.secondary', fontWeight:'bold' }}>ID CLIENT :</Typography>
           <Typography level="body-md" >{data.customer_id}</Typography>
         </Box>
         
         <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 0 : 2, alignItems: isMobile ? 'start' : 'center' }}>
-          <Typography level="body-xs" sx={{ color: 'text.secondary' }}>NOM COMPLET :</Typography>
+          <Typography level="body-xs" sx={{ color: 'text.secondary', fontWeight:'bold' }}>NOM COMPLET :</Typography>
           <Typography level="body-md">{data.customer_firstname} {data.customer_lastname}</Typography>
         </Box>
         
         
         <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 0 : 2, alignItems: isMobile ? 'start' : 'center' }}>
-          <Typography level="body-xs" sx={{ color: 'text.secondary' }}>TÉLÉPHONE :</Typography>
+          <Typography level="body-xs" sx={{ color: 'text.secondary', fontWeight:'bold' }}>TÉLÉPHONE :</Typography>
           <Typography level="body-md" fontWeight="medium">{data.customer_mobile}</Typography>
         </Box>
         
         <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 0 : 2, alignItems: isMobile ? 'start' : 'center' }}>
-          <Typography level="body-xs" sx={{ color: 'text.secondary' }}>DATE D'INSCRIPTION :</Typography>
+          <Typography level="body-xs" sx={{ color: 'text.secondary', fontWeight:'bold' }}>DATE D'INSCRIPTION :</Typography>
           <Typography level="body-md">{data.customer_create_date?.split('T')[0] || 'N/A'}</Typography>
         </Box>
         {data.customer_email && (
           <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 0 : 2, alignItems: isMobile ? 'start' : 'center'  }}>
-            <Typography level="body-xs" sx={{ color: 'text.secondary' }}>EMAIL :</Typography>
+            <Typography level="body-xs" sx={{ color: 'text.secondary', fontWeight:'bold' }}>EMAIL :</Typography>
   
               <Typography level="body-md">{data.customer_email}</Typography>
             </Box>
@@ -260,23 +260,23 @@ export default function CustomerDetails({
       }}>
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(3, 1fr)' }, gap: 2, mb: 1.5 }}>
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <Typography level="body-xs" sx={{ color: 'text.secondary' }}>WILAYA</Typography>
+            <Typography level="body-xs" sx={{ color: 'text.secondary', fontWeight:'bold' }}>WILAYA</Typography>
             <Typography level="body-md">{data.customer_wilaya}</Typography>
           </Box>
           
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <Typography level="body-xs" sx={{ color: 'text.secondary' }}>DAIRA</Typography>
+            <Typography level="body-xs" sx={{ color: 'text.secondary', fontWeight:'bold' }}>DAIRA</Typography>
             <Typography level="body-md">{data.customer_daira}</Typography>
           </Box>
           
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <Typography level="body-xs" sx={{ color: 'text.secondary' }}>COMMUNE</Typography>
+            <Typography level="body-xs" sx={{ color: 'text.secondary', fontWeight:'bold' }}>COMMUNE</Typography>
             <Typography level="body-md">{data.customer_commune}</Typography>
           </Box>
         </Box>
         
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-          <Typography level="body-xs" sx={{ color: 'text.secondary' }}>ADRESSE DÉTAILLÉE</Typography>
+          <Typography level="body-xs" sx={{ color: 'text.secondary', fontWeight:'bold' }}>ADRESSE DÉTAILLÉE</Typography>
           <Typography level="body-md" sx={{ whiteSpace: 'pre-wrap' }}>{data.customer_address}</Typography>
         </Box>
       </Box>
