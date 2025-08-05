@@ -415,12 +415,6 @@ export default function TableCustomerWaitingForValidation(){
 
 
         <MenuItem onClick={() => {
-          // TODO: Implement view transaction details logic maybe if i have some time i will think about it
-          handleCloseMenu();
-        }}>
-          Voir transaction
-        </MenuItem>
-        <MenuItem onClick={() => {
           // TODO: Implement validate logic
           handleValidateAction(activeRow)
           
