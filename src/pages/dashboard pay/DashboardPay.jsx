@@ -1004,7 +1004,7 @@ useEffect(() => {
     <Box 
     className="flex flex-col gap-4" 
       sx={{ 
-        width: 'fit-content',
+        width: isMobile ? 'auto' : 'fit-content',
         
         maxHeight: { xs: '65vh', md: '70vh' },
         overflowY: 'auto',
