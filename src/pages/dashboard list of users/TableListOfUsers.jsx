@@ -226,36 +226,23 @@ export default function TableListOfUsers(){
         header: 'Prénom',
         size: 150,
       },
-      {
-        accessorKey: 'is_active',
-        header: 'Agent',
+        {
+        header: 'Position',
         size: 150,
-        Cell : ({cell}) => {
-          return cell.getValue()
-            ? <Typography style={{ color: 'green', fontWeight: 'bold' }}>Oui</Typography>
-            : <Typography style={{ color: 'red', fontWeight: 'bold' }}>Non</Typography>;
-        }
-      },
-
-      {
-        accessorKey: 'is_staff',
-        header: 'Superviseur',
-        size: 150,
-        Cell : ({cell}) => {
-          return cell.getValue()
-            ? <Typography style={{ color: 'green', fontWeight: 'bold' }}>Oui</Typography>
-            : <Typography style={{ color: 'red', fontWeight: 'bold' }}>Non</Typography>;
-        }
-      },
-
-      {
-        accessorKey: 'is_superuser',
-        header: 'Administrateur',
-        size: 150,
-        Cell : ({cell}) => {
-          return cell.getValue()
-            ? <Typography style={{ color: 'green', fontWeight: 'bold' }}>Oui</Typography>
-            : <Typography style={{ color: 'red', fontWeight: 'bold' }}>Non</Typography>;
+        Cell: ({ cell}) => {
+          const { is_active, is_staff, is_superuser } = cell.row.original;
+          let position = '';
+          if (is_superuser) {
+            position = 'Admin'
+            return <Chip label={position} color="error" variant="outlined" sx={{ placeSelf: 'center', width:'100%' }} />;
+          } else if (is_staff) {
+            position = 'Superviseur';
+            return <Chip label={position} color="success" variant="outlined" sx={{ placeSelf: 'center', width:'100%' }} />;
+          } else if (is_active) {
+            position = 'Agent';
+            return <Chip label={position} color="neutral" variant="outlined" sx={{ placeSelf: 'center', width:'100%' }} />;
+          }
+          
         }
       },
       {
