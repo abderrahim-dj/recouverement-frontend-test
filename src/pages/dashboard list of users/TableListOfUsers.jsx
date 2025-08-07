@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-
+import Chip from '@mui/material/Chip';
 
 //functin to get the related data for the user
 import filterHistorySendingMoney from '../../services/filterHistorySendingMoney';
