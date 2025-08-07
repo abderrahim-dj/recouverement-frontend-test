@@ -371,7 +371,7 @@ export default function MobileSideNavbar() {
       {/* image */}
       <Box sx={{ display: 'flex', flexDirection: 'column' ,gap: '1rem', alignItems: 'center', justifySelf: 'flex-start', marginTop:'2rem', paddingBottom:'2rem' }}>
         <img src={img} alt="logo" className="rounded-lg w-30" />
-        <Typography level="h1" fontSize={30}>Diar Dzair</Typography>
+        <Typography level="h1" fontSize={30}>Groupe Diar Dzair</Typography>
       </Box>
 
 
