@@ -204,7 +204,7 @@ export default function CreateNewCustomer() {
     defaultValues: {
       user_id: '',
       customer_belong_to: '',
-      customer_belong_to_name_autre:'',
+      //customer_belong_to_name_autre:'',
       actions: [],
       
     }
@@ -301,14 +301,14 @@ export default function CreateNewCustomer() {
         'user_id',
         'actions',
         'customer_belong_to',
-        'customer_belong_to_name_autre',
+        //'customer_belong_to_name_autre',
       ]
       
       const formData = {
         customer_id: parseInt(data.user_id),
         
         customer_belong_to: data.customer_belong_to,
-        customer_belong_to_name_autre: data.customer_belong_to_name_autre || '',
+        //customer_belong_to_name_autre: data.customer_belong_to_name_autre || '',
 
         customer_frais_apport_personnel: parseFloat(data.actions.find(action => action.type === 'apportPersonnel')?.value) || 0,
         
@@ -617,9 +617,10 @@ export default function CreateNewCustomer() {
                   
                   <Typography sx={{ fontWeight: 'bold', color: 'text.secondary' }}>Adresse:</Typography>
                   <Typography>{customerInfo.data.adresse}</Typography>
-      
+{/*       
                   <Typography sx={{ fontWeight: 'bold', color: 'text.secondary' }}>Client de:</Typography>
                   <Typography>{formDataSaving.customer_belong_to === 'autre' ? formDataSaving.customer_belong_to_name_autre : listOfAvailableBelongTo.find(item => item.id === formDataSaving.customer_belong_to).name}</Typography>
+                   */}
                 </Box>
               </Box>
 
