@@ -48,7 +48,7 @@ export default function InputCustomerBelongTo ({listOfAvailableBelongTo, control
                 )
               })}
               
-              <MenuItem value='autre'>autre</MenuItem>
+{/*               <MenuItem value='autre'>autre</MenuItem> */}
               
 
             </Select>
@@ -60,7 +60,7 @@ export default function InputCustomerBelongTo ({listOfAvailableBelongTo, control
 
 
 
-
+{/* 
 
             {belongToValue ==='autre' && (
               <Controller
@@ -82,7 +82,7 @@ export default function InputCustomerBelongTo ({listOfAvailableBelongTo, control
                   />
                 )}
               />
-            )}
+            )} */}
 
 
           </Box>
