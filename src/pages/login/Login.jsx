@@ -73,7 +73,7 @@ export default function Login() {
           gap: '1rem',
         }}
       >
-        <img src={diarDzair} alt="Diar Dzair" className='w-90 '/>
+        <img src={diarDzair} alt="Diar Dzair" className={`${isMobile ? 'w-60' : 'w-90'} mb-4`}/>
          <Typography level="h1" sx={{
           textAlign: 'center',
           
