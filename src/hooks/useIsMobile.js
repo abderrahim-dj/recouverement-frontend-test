@@ -1,0 +1,10 @@
+// is will return true if the screen is smaller than 960px (phones/tablets), otherwise false
+
+
+import { useMediaQuery, useTheme } from '@mui/material';
+
+export default function useIsMobile() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  return isMobile;
+}
